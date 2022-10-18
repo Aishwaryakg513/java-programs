@@ -1,0 +1,33 @@
+import java.util.*;
+public class Main
+{
+    public static void firstLastOccurrence(int a[], int x)
+    {
+        Arrays.sort(a);
+        for(int i=0;i<a.length;i++)
+        {
+            if(a[i]==x)
+            {
+                System.out.println("First Occurence: " + i);
+            }
+            if(a[i]==x && a[i]!=a[i+1])
+            {
+                System.out.print("Last occurence: "+ (i+1) );
+            }
+        }
+    }
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    int n;
+	    System.out.print("Enter the size: ");
+	    n = sc.nextInt();
+	    int a[] = new int[n];
+	    for(int i=0;i<n;i++)
+	    {
+	        a[i] = sc.nextInt();
+	    }
+	    int x;
+	    x = sc.nextInt();
+	    firstLastOccurrence(a,x);
+	}
+}
